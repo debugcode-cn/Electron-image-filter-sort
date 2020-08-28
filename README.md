@@ -1,8 +1,12 @@
-# Electron-quick-start
+# Electron-image-filter-sort
 
 ```bash
+#Clone 
+
+git clone https://github.com/wlz321/Electron-image-filter-sort.git
+
 # Go into the repository
-cd Electron-quick-start
+cd Electron-image-filter-sort
 
 #快速安装 Electron框架
 npm config set electron_mirror http://npm.taobao.org/mirrors/electron/
@@ -13,4 +17,3 @@ npm install
 # Run the app
 npm start
 ```
-[CC0 1.0 (Public Domain)](LICENSE.md)
