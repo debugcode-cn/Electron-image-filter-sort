@@ -86,10 +86,10 @@ $("#btn-run").on('click',function(ev){
             }
             return 0;
         });
-        let file_name = 'sorted_image_path.txt';
+        let file_name = path.join(path_save,'sorted_image_path.txt') ;
         let file_stream = null;
         if(images.length){
-            file_stream = fs.createWriteStream(path.join(path_save,file_name),{flags:'w+'});
+            file_stream = fs.createWriteStream(file_name,{flags:'w+'});
         }
         let path_list = '';
         images.map((file)=>{
@@ -100,6 +100,7 @@ $("#btn-run").on('click',function(ev){
             file_stream.end();
         }
         $("#pathlist").html(path_list);
+        remote.shell.showItemInFolder(file_name)
     }
     btn_target.removeClass('disabled');
 })
