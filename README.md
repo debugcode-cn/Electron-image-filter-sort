@@ -1,8 +1,8 @@
-# electron-quick-start
+# Electron-quick-start
 
 ```bash
 # Go into the repository
-cd electron-quick-start
+cd Electron-quick-start
 
 #快速安装 Electron框架
 npm config set electron_mirror http://npm.taobao.org/mirrors/electron/
