@@ -86,10 +86,19 @@ $("#btn-run").on('click',function(ev){
             }
             return 0;
         });
+        let file_name = 'sorted_image_path.txt';
+        let file_stream = null;
+        if(images.length){
+            file_stream = fs.createWriteStream(path.join(path_save,file_name),{flags:'w+'});
+        }
         let path_list = '';
         images.map((file)=>{
+            file_stream.write(file.path + OS.EOL);
             path_list +=  file.path + OS.EOL
         })
+        if(file_stream){
+            file_stream.end();
+        }
         $("#pathlist").html(path_list);
     }
     btn_target.removeClass('disabled');
