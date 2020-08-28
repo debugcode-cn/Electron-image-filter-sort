@@ -5,14 +5,26 @@
     <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
     <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
-    <title>Hello World!</title>
+    <title>图片资源排序过滤处理工具</title>
   </head>
   <body>
-    <h1>Hello World!</h1>
-    We are using Node.js <span id="node-version"></span>,
-    Chromium <span id="chrome-version"></span>,
-    and Electron <span id="electron-version"></span>.
 
+    <p>1、过滤源目录中的所有图片文件</p>
+    <br>    <br>
+    <input type="text" value="我是源文件目录" class="input-get" >
+    <button class="btn btn-get-dir">选择源目录</button>
+
+    <br>    <br>
+
+    <input type="text" value="我是目标目录" class="input-save" />
+    <button class="btn btn-save-dir">选择目标目录</button>
+
+    <br>    <br>
+
+    <p>按照文件大小降序排列</p>
+    <textarea name="path-list" id="pathlist" cols="70" rows="20"></textarea>
+
+    <button id="btn-run">执行</button>
     <!-- You can also require other files to run in this process -->
     <script src="./renderer.js"></script>
   </body>
