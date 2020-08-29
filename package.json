@@ -17,7 +17,8 @@
   "author": "GitHub",
   "license": "CC0-1.0",
   "devDependencies": {
-    "electron": "^10.1.0"
+    "electron": "^10.1.0",
+    "fs-extra": "^9.0.1"
   },
   "dependencies": {
     "imageinfo": "^1.0.4",
